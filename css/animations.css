@@ -1334,3 +1334,47 @@ span {
     }
 
 }
+
+/* =====================================================
+   PASTEL - ENTRADA MÓVIL
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .scene--active
+    .birthday-cake {
+        animation:
+            cakeEntranceMobile
+            1.4s
+            cubic-bezier(
+                0.2,
+                0.8,
+                0.25,
+                1
+            )
+            0.65s
+            both;
+    }
+
+}
+
+
+@keyframes cakeEntranceMobile {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.62);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(0.72);
+    }
+
+}
