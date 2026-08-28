@@ -4386,3 +4386,37 @@ span:nth-child(4) {
     }
 
 }
+
+@media (max-width: 700px) and (max-height: 850px) {
+
+    .tree-title {
+        font-size: clamp(30px, 9vw, 46px);
+        margin-bottom: 10px;
+    }
+
+    .tree-subtitle {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .tree-illustration,
+    .tree-visual,
+    .wish-tree {
+        transform: scale(0.62);
+        margin: -25px auto -45px;
+    }
+
+    .tree-message,
+    .tree-final-message,
+    .tree-closing {
+        font-size: clamp(20px, 6.6vw, 30px);
+        margin-bottom: 14px;
+    }
+
+    #tree-continue,
+    .tree-continue {
+        transform: scale(0.95);
+        margin-top: 6px;
+    }
+
+}
