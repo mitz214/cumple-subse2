@@ -4756,3 +4756,19 @@ span:nth-child(4) {
         transform: scale(0.96);
     }
 }
+
+@media (max-width: 700px) {
+
+    .birthday-cake {
+        width: 380px;
+        height: 315px;
+
+        margin:
+            -5px auto
+            -55px;
+
+        transform-origin:
+            top center;
+    }
+
+}
