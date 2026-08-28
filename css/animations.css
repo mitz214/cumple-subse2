@@ -1,0 +1,1336 @@
+/* =====================================================
+   ESTRELLAS
+===================================================== */
+
+.star {
+    animation:
+        twinkle var(--twinkle-duration, 4s)
+        ease-in-out
+        infinite;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: var(--min-opacity, 0.2);
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: var(--max-opacity, 0.8);
+        transform: scale(1.3);
+    }
+
+}
+
+
+/* =====================================================
+   PORTADA
+===================================================== */
+
+.intro-star {
+    animation:
+        starFloat 3.5s ease-in-out infinite,
+        starGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes starFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+@keyframes starGlow {
+
+    0%,
+    100% {
+        opacity: 0.65;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+.scene--active .eyebrow {
+    animation:
+        fadeUp 1s ease forwards;
+}
+
+.scene--active .date-title {
+    animation:
+        dateReveal 1.5s
+        cubic-bezier(0.2, 0.75, 0.25, 1)
+        forwards;
+}
+
+.scene--active .decorative-line {
+    animation:
+        fadeIn 1.4s ease 0.6s both;
+}
+
+.scene--active .intro-message {
+    animation:
+        fadeUp 1.2s ease 0.8s both;
+}
+
+.scene--active .primary-button {
+    animation:
+        fadeUp 1.1s ease 1.15s both;
+}
+
+.scene--active .intro-hint {
+    animation:
+        fadeIn 1.2s ease 1.5s both;
+}
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes dateReveal {
+
+    from {
+        opacity: 0;
+        transform:
+            scale(0.9)
+            translateY(20px);
+
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+
+        filter: blur(0);
+    }
+
+}
+
+
+/* =====================================================
+   HISTORIA
+===================================================== */
+
+.story-line.story-visible,
+.story-word.story-visible {
+    animation:
+        storyReveal 1.1s
+        cubic-bezier(0.2, 0.75, 0.25, 1)
+        forwards;
+}
+
+@keyframes storyReveal {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(18px);
+
+        filter: blur(3px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+
+        filter: blur(0);
+    }
+
+}
+
+
+.reveal-block.reveal-visible {
+    animation:
+        revealBlock 1.4s ease forwards;
+}
+
+@keyframes revealBlock {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   ESCENA FINAL TEMPORAL
+===================================================== */
+
+.scene--active .reveal-stars span {
+    animation:
+        starGlow 2s ease-in-out infinite;
+}
+
+.scene--active .reveal-stars span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scene--active .reveal-stars span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+
+/* =====================================================
+   ACCESIBILIDAD
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+/* =====================================================
+   REVELACIÓN DE NOMBRE
+===================================================== */
+
+.scene--active .name-star-wrapper {
+    animation:
+        fadeUp 1s ease forwards;
+}
+
+.scene--active .name-pretitle {
+    animation:
+        fadeUp 1s ease 0.25s both;
+}
+
+.scene--active .honoree-name {
+    animation:
+        nameReveal 1.4s cubic-bezier(0.2, 0.75, 0.25, 1) 0.45s both;
+}
+
+.scene--active .name-subtitle {
+    animation:
+        fadeUp 1s ease 0.9s both;
+}
+
+.scene--active #name-scene-button {
+    animation:
+        fadeUp 1s ease 1.2s both;
+}
+
+.name-star-core {
+    animation:
+        nameStarPulse 2.6s ease-in-out infinite;
+}
+
+.name-star-halo {
+    animation:
+        haloPulse 3s ease-in-out infinite;
+}
+
+@keyframes nameReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.96);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+@keyframes nameStarPulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.88;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+@keyframes haloPulse {
+    0%,
+    100% {
+        transform: scale(0.92);
+        opacity: 0.55;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.95;
+    }
+}
+
+
+/* =====================================================
+   ESCENA ESENCIA
+===================================================== */
+
+.essence-line.essence-visible,
+.trait-word.essence-visible {
+    animation:
+        essenceReveal 0.95s cubic-bezier(0.2, 0.75, 0.25, 1) forwards;
+}
+
+@keyframes essenceReveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.96);
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.essence-final-block.essence-final-visible {
+    animation:
+        revealBlock 1.2s ease forwards;
+}
+
+/* =====================================================
+   LÍNEAS DE CONSTELACIÓN
+===================================================== */
+
+@keyframes constellationLineReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            rotate(var(--line-angle))
+            scaleX(0);
+    }
+
+    to {
+        opacity: 0.65;
+
+        transform:
+            rotate(var(--line-angle))
+            scaleX(1);
+    }
+
+}
+
+
+/* =====================================================
+   CONSTELACIÓN COMPLETA
+===================================================== */
+
+.constellation-sky--complete
+.message-star--read
+.message-star-core {
+    animation:
+        finalConstellationPulse
+        2s ease-in-out infinite;
+}
+
+@keyframes finalConstellationPulse {
+
+    0%,
+    100% {
+        opacity: 0.78;
+
+        filter:
+            brightness(1);
+    }
+
+    50% {
+        opacity: 1;
+
+        filter:
+            brightness(1.7);
+    }
+
+}
+
+
+/* =====================================================
+   LUZ DESCENDENTE
+===================================================== */
+
+.transition-light--falling {
+    animation:
+        lightFall
+        1.8s
+        cubic-bezier(
+            0.5,
+            0,
+            0.5,
+            1
+        )
+        forwards;
+}
+
+@keyframes lightFall {
+
+    0% {
+        opacity: 0;
+
+        top: 35%;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.6);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.3);
+    }
+
+    100% {
+        opacity: 0;
+
+        top: 96%;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.4);
+    }
+
+}
+
+
+/* =====================================================
+   ENTRADA RECUERDOS
+===================================================== */
+
+.scene--active
+.falling-light-arrival {
+    animation:
+        memoryLightArrival
+        1.5s ease 0.35s both;
+}
+
+.scene--active
+.memories-title {
+    animation:
+        fadeUp
+        1.2s ease 0.65s both;
+}
+
+.scene--active
+.memories-introduction {
+    animation:
+        fadeUp
+        1.2s ease 0.9s both;
+}
+
+.scene--active
+.memories-gallery {
+    animation:
+        fadeUp
+        1.3s ease 1.1s both;
+}
+
+.scene--active
+.memories-controls {
+    animation:
+        fadeUp
+        1s ease 1.3s both;
+}
+
+.scene--active
+.memories-continue {
+    animation:
+        fadeUp
+        1s ease 1.45s both;
+}
+
+@keyframes memoryLightArrival {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-45px)
+            scale(1.5);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+/* =====================================================
+   ENTRADA DE AGRADECIMIENTO
+===================================================== */
+
+.scene--active
+.gratitude-star {
+    animation:
+        gratitudeStarEntrance
+        1.2s ease both;
+}
+
+.scene--active
+.gratitude-title {
+    animation:
+        fadeUp
+        1.2s ease 0.25s both;
+}
+
+
+@keyframes gratitudeStarEntrance {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-18px)
+            scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   TEXTOS
+===================================================== */
+
+.gratitude-visible {
+    animation:
+        gratitudeTextReveal
+        1.1s
+        cubic-bezier(
+            0.2,
+            0.75,
+            0.25,
+            1
+        )
+        forwards;
+}
+
+
+@keyframes gratitudeTextReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(17px)
+            scale(0.97);
+
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter: blur(0);
+    }
+
+}
+
+
+/* =====================================================
+   NACIMIENTO DE LUCES
+===================================================== */
+
+.gratitude-light--visible {
+    animation:
+        gratitudeLightBirth
+        1.4s ease forwards,
+        gratitudeLightFloat
+        3.8s ease-in-out
+        1.4s infinite;
+}
+
+
+@keyframes gratitudeLightBirth {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.3);
+    }
+
+    55% {
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.25);
+    }
+
+    100% {
+        opacity: 0.9;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+}
+
+
+@keyframes gratitudeLightFloat {
+
+    0%,
+    100% {
+        transform:
+            translate(-50%, -50%)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translate(-50%, -50%)
+            translateY(-9px);
+    }
+
+}
+
+
+/* =====================================================
+   LUCES DESCENDIENDO
+===================================================== */
+
+.gratitude-light--fall {
+    animation:
+        gratitudeLightFall
+        2.4s
+        cubic-bezier(
+            0.55,
+            0,
+            0.45,
+            1
+        )
+        forwards !important;
+}
+
+
+@keyframes gratitudeLightFall {
+
+    0% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 88%;
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.45);
+    }
+
+}
+
+
+/* =====================================================
+   SEMILLA
+===================================================== */
+
+.seed-light--fall {
+    animation:
+        seedLightFall
+        1.7s ease forwards;
+}
+
+
+@keyframes seedLightFall {
+
+    0% {
+        opacity: 0;
+
+        top: -25px;
+
+        transform:
+            translateX(-50%)
+            scale(1.3);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        top: 67px;
+
+        transform:
+            translateX(-50%)
+            scale(0.4);
+    }
+
+}
+
+
+.seed-sprout--visible {
+    animation:
+        sproutAppear
+        1.4s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.3,
+            1
+        )
+        forwards;
+}
+
+
+@keyframes sproutAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            translateY(8px)
+            scale(0.25);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+/* =====================================================
+   ENTRADA ESCENA DEL ÁRBOL
+===================================================== */
+
+.scene--active .tree-star {
+    animation:
+        gratitudeStarEntrance
+        1.1s ease both;
+}
+
+.scene--active .tree-title {
+    animation:
+        fadeUp
+        1.15s ease 0.2s both;
+}
+
+.scene--active .tree-subtitle {
+    animation:
+        fadeUp
+        1.15s ease 0.45s both;
+}
+
+
+/* =====================================================
+   DIBUJO DEL ÁRBOL
+===================================================== */
+
+.tree-draw {
+    animation:
+        treeDraw
+        1.2s ease forwards;
+}
+
+@keyframes treeDraw {
+
+    from {
+        stroke-dashoffset: 100;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+
+}
+
+
+/* =====================================================
+   HOJAS
+===================================================== */
+
+.tree-leaf--visible {
+    animation:
+        treeLeafReveal
+        0.85s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.3,
+            1
+        )
+        forwards;
+}
+
+@keyframes treeLeafReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.2);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   LUCES
+===================================================== */
+
+.tree-light--visible {
+    animation:
+        treeLightReveal
+        1.2s ease forwards,
+        treeLightPulse
+        2.7s ease-in-out
+        1.2s infinite;
+}
+
+@keyframes treeLightReveal {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translate(-50%, -50%)
+            scale(0.25);
+    }
+
+    55% {
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.3);
+    }
+
+    100% {
+        opacity: 0.95;
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+    }
+
+}
+
+@keyframes treeLightPulse {
+
+    0%,
+    100% {
+        opacity: 0.65;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+/* =====================================================
+   ENTRADA REGALO
+===================================================== */
+
+.scene--active
+.gift-guiding-light {
+    animation:
+        giftLightEntrance
+        1.5s ease both;
+}
+
+.scene--active
+.gift-intro {
+    animation:
+        fadeUp
+        1.2s ease 0.4s both;
+}
+
+.scene--active
+.gift-box {
+    animation:
+        giftEntrance
+        1.3s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.3,
+            1
+        )
+        0.85s both;
+}
+
+.scene--active
+.gift-instruction {
+    animation:
+        fadeUp
+        1s ease
+        1.3s both;
+}
+
+
+@keyframes giftLightEntrance {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-40px)
+            scale(1.5);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+@keyframes giftEntrance {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(0.75);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   CAJA RESPIRANDO
+===================================================== */
+
+.gift-box:not(.gift-box--opened) {
+    animation:
+        giftIdle
+        3.2s ease-in-out infinite;
+}
+
+@keyframes giftIdle {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-7px);
+    }
+
+}
+
+
+/* =====================================================
+   APERTURA
+===================================================== */
+
+.gift-lid {
+    transition:
+        transform
+        1s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.25,
+            1
+        );
+}
+
+.gift-glow {
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+
+/* pequeña celebración */
+
+.gift-box--opened
+.gift-body {
+    animation:
+        giftBodyGlow
+        1.2s ease;
+}
+
+@keyframes giftBodyGlow {
+
+    0%,
+    100% {
+        filter:
+            brightness(1);
+    }
+
+    50% {
+        filter:
+            brightness(1.35);
+    }
+
+}
+
+/* =====================================================
+   FINAL - ENTRADA
+===================================================== */
+
+.scene--active
+.finale-star {
+    animation:
+        finalStarEntrance
+        1.3s ease both;
+}
+
+.scene--active
+.finale-intro {
+    animation:
+        fadeUp
+        1.2s ease
+        0.25s both;
+}
+
+.scene--active
+.birthday-cake {
+    animation:
+        cakeEntrance
+        1.4s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.25,
+            1
+        )
+        0.65s both;
+}
+
+.scene--active
+.wish-block {
+    animation:
+        fadeUp
+        1.1s ease
+        1.1s both;
+}
+
+
+@keyframes finalStarEntrance {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-35px)
+            scale(1.5);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+@keyframes cakeEntrance {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(0.82);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   LLAMAS
+===================================================== */
+
+.candle-flame {
+    animation:
+        flameDance
+        0.85s
+        ease-in-out
+        infinite alternate;
+}
+
+.candle:nth-child(2)
+.candle-flame {
+    animation-delay: 0.17s;
+}
+
+.candle:nth-child(3)
+.candle-flame {
+    animation-delay: 0.34s;
+}
+
+
+@keyframes flameDance {
+
+    from {
+        transform:
+            translateX(-50%)
+            rotate(-3deg)
+            scaleY(0.96);
+    }
+
+    to {
+        transform:
+            translateX(-50%)
+            rotate(4deg)
+            scaleY(1.08);
+    }
+
+}
+
+
+/* =====================================================
+   APAGAR
+===================================================== */
+
+.candle--out
+.candle-flame {
+    animation:
+        flameOut
+        0.42s ease
+        forwards;
+}
+
+
+@keyframes flameOut {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            translateY(-10px)
+            scale(0.1);
+    }
+
+}
+
+
+/* =====================================================
+   HUMO
+===================================================== */
+
+.candle-smoke--visible {
+    opacity: 1;
+}
+
+.candle-smoke--visible
+span {
+    animation:
+        smokeRise
+        1.6s ease-out
+        forwards;
+}
+
+
+@keyframes smokeRise {
+
+    from {
+        opacity: 0.55;
+
+        transform:
+            translateY(0)
+            scale(0.7);
+    }
+
+    to {
+        opacity: 0;
+
+        transform:
+            translateY(-55px)
+            scale(1.6);
+    }
+
+}
+
+
+/* =====================================================
+   CONFETI
+===================================================== */
+
+.confetti-piece {
+    animation:
+        confettiFall
+        var(--fall-duration)
+        linear forwards;
+}
+
+
+@keyframes confettiFall {
+
+    from {
+        transform:
+            translateY(-20px)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(var(--rotation));
+    }
+
+}
+
+
+/* =====================================================
+   DESTELLOS
+===================================================== */
+
+.final-spark {
+    animation:
+        finalSparkBurst
+        1.8s ease-out
+        forwards;
+}
+
+
+@keyframes finalSparkBurst {
+
+    from {
+        opacity: 1;
+
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+    to {
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--spark-x),
+                var(--spark-y)
+            )
+            scale(0.2);
+    }
+
+}

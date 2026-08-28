@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+        name="description"
+        content="Una experiencia especial de cumpleaños."
+    />
+
+    <title>28 · 08 | Una luz que inspira</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+</head>
+
+<body>
+<!-- =====================================================
+     MÚSICA
+===================================================== -->
+
+<audio
+    id="background-music"
+    preload="auto"
+    loop
+>
+    <source
+        src="./assets/audio/musica.mp3"
+        type="audio/mpeg"
+    >
+    <button
+    id="music-toggle"
+    class="music-toggle"
+    type="button"
+    aria-label="Activar o desactivar música"
+>
+    <span id="music-icon">
+        🔇
+    </span>
+</button>
+</audio>
+    <!-- =====================================================
+         FONDO GENERAL
+    ====================================================== -->
+
+    <div class="background-glow background-glow--one"></div>
+    <div class="background-glow background-glow--two"></div>
+
+    <div
+        id="stars"
+        class="stars"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =====================================================
+         EXPERIENCIA
+    ====================================================== -->
+
+    <main id="experience">
+
+        <!-- =========================
+             ESCENA 1
+        ========================== -->
+
+        <section
+            id="scene-intro"
+            class="scene scene--active"
+        >
+
+            <div class="scene-content intro-content">
+
+                <div class="intro-star">
+                    ✦
+                </div>
+
+                <p class="eyebrow">
+                    Una fecha especial
+                </p>
+
+                <h1 class="date-title">
+                    <span>28</span>
+                    <span class="date-dot">·</span>
+                    <span>08</span>
+                </h1>
+
+                <div class="decorative-line">
+                    <span></span>
+                    <i>✧</i>
+                    <span></span>
+                </div>
+
+                <p class="intro-message">
+                    Hay días que merecen ser recordados
+                    <br />
+                    de una manera especial.
+                </p>
+
+                <button
+                    id="discover-button"
+                    class="primary-button"
+                    type="button"
+                >
+                    <span>Descubrir</span>
+                    <span class="button-star">✦</span>
+                </button>
+
+                <p class="intro-hint">
+                    Una pequeña sorpresa preparada con cariño
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ESCENA 2
+        ========================== -->
+
+        <section
+            id="scene-light"
+            class="scene"
+        >
+
+            <div class="scene-content light-content">
+
+                <div class="small-star">
+                    ✦
+                </div>
+
+                <p
+                    class="story-line"
+                    data-delay="0"
+                >
+                    Algunas personas sencillamente forman parte de un lugar.
+                </p>
+
+                <p
+                    class="story-line story-line--highlight"
+                    data-delay="900"
+                >
+                    Otras dejan una huella.
+                </p>
+
+                <div class="story-words">
+
+                    <span
+                        class="story-word"
+                        data-delay="1800"
+                    >
+                        Inspiran.
+                    </span>
+
+                    <span
+                        class="story-word"
+                        data-delay="2400"
+                    >
+                        Guían.
+                    </span>
+
+                    <span
+                        class="story-word"
+                        data-delay="3000"
+                    >
+                        Acompañan.
+                    </span>
+
+                </div>
+
+                <p
+                    class="story-line story-line--final"
+                    data-delay="3900"
+                >
+                    Y hacen que quienes las rodean
+                    también quieran dar lo mejor de sí.
+                </p>
+
+                <div
+                    id="reveal-block"
+                    class="reveal-block"
+                >
+
+                    <div class="reveal-line"></div>
+
+                    <p class="reveal-small">
+                        Hoy queremos celebrar
+                    </p>
+
+                    <h2>
+                        una de esas personas
+                    </h2>
+
+                    <button
+                        id="continue-button"
+                        class="secondary-button"
+                        type="button"
+                    >
+                        Continuar
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ESCENA 3 TEMPORAL
+             después irá aquí su nombre
+        ========================== -->
+
+        <section
+    id="scene-reveal"
+    class="scene"
+>
+
+    <div class="scene-content name-reveal-content">
+
+        <div class="name-star-wrapper">
+            <div class="name-star-halo"></div>
+            <div class="name-star-core">✦</div>
+        </div>
+
+        <p class="name-pretitle">
+            Hoy celebramos a...
+        </p>
+
+        <h2
+            id="honoree-name"
+            class="honoree-name"
+        >
+            Nombre de la Subsecretaria
+        </h2>
+
+        <p class="name-subtitle">
+            Una persona que inspira, guía y deja huella
+            en quienes tienen la fortuna de coincidir con usted.
+        </p>
+
+        <button
+            id="name-scene-button"
+            class="primary-button"
+            type="button"
+        >
+            <span>Continuar</span>
+            <span>✦</span>
+        </button>
+
+    </div>
+
+</section>
+
+ <!--ESCENA 4 -->
+<!-- =====================================================
+     ESCENA 4
+     MÁS ALLÁ DEL CARGO
+===================================================== -->
+
+<section
+    id="scene-essence"
+    class="scene"
+>
+
+    <div class="scene-content essence-content">
+
+        <p class="eyebrow">
+            Más allá del cargo
+        </p>
+
+        <p
+            class="essence-line"
+            data-essence-delay="0"
+        >
+            Hay muchas formas de describir a una persona.
+        </p>
+
+        <div class="traits-cloud">
+
+            <span
+                class="trait-word"
+                data-essence-delay="700"
+            >
+                Liderazgo
+            </span>
+
+            <span
+                class="trait-word"
+                data-essence-delay="1050"
+            >
+                Compromiso
+            </span>
+
+            <span
+                class="trait-word"
+                data-essence-delay="1400"
+            >
+                Empatía
+            </span>
+
+            <span
+                class="trait-word"
+                data-essence-delay="1750"
+            >
+                Fortaleza
+            </span>
+
+            <span
+                class="trait-word"
+                data-essence-delay="2100"
+            >
+                Inspiración
+            </span>
+
+            <span
+                class="trait-word"
+                data-essence-delay="2450"
+            >
+                Servicio
+            </span>
+
+            <span
+                class="trait-word"
+                data-essence-delay="2800"
+            >
+                Cercanía
+            </span>
+
+            <span
+                class="trait-word"
+                data-essence-delay="3150"
+            >
+                Determinación
+            </span>
+
+        </div>
+
+        <div
+            id="essence-final-block"
+            class="essence-final-block"
+        >
+
+            <p class="essence-small">
+                Hoy preferimos simplemente decir:
+            </p>
+
+            <h2 class="essence-thanks">
+                Gracias por ser usted.
+            </h2>
+
+            <button
+                id="essence-button"
+                class="secondary-button"
+                type="button"
+            >
+                Continuar
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+ <!-- =====================================================
+     ESCENA 5
+     CONSTELACIÓN DE LOS BUENOS DESEOS
+===================================================== -->
+
+<section
+    id="scene-constellation"
+    class="scene scene--constellation"
+>
+
+    <div class="constellation-layout">
+
+        <!-- Encabezado -->
+
+        <div class="constellation-header">
+
+            <p class="eyebrow">
+                Una constelación para usted
+            </p>
+
+            <h2>
+                Cada luz guarda un deseo
+            </h2>
+
+            <p class="constellation-description">
+                Algunas personas quisieron dejarle unas palabras
+                en este día especial.
+            </p>
+
+            <p class="constellation-instruction">
+                Toque una estrella para descubrir su mensaje
+                <span>✦</span>
+            </p>
+
+        </div>
+
+
+        <!-- Zona de estrellas -->
+
+        <div
+            id="constellation-sky"
+            class="constellation-sky"
+        >
+
+            <div
+                id="constellation-lines"
+                class="constellation-lines"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                id="message-stars"
+                class="message-stars"
+            ></div>
+
+        </div>
+
+
+        <!-- Progreso -->
+
+        <div class="constellation-progress">
+
+            <div class="progress-track">
+                <div
+                    id="constellation-progress-bar"
+                    class="progress-bar"
+                ></div>
+            </div>
+
+            <p>
+                <span id="read-count">0</span>
+                de
+                <span id="total-count">0</span>
+                luces descubiertas
+                <span class="progress-star">✦</span>
+            </p>
+
+        </div>
+
+
+        <!-- Se revela al leer todos -->
+
+        <div
+            id="constellation-complete"
+            class="constellation-complete"
+        >
+
+            <div class="complete-star">
+                ✦
+            </div>
+
+            <p>
+                Cada mensaje es una pequeña luz.
+            </p>
+
+            <h3>
+                Juntas forman algo mucho más grande.
+            </h3>
+
+            <button
+                id="constellation-continue"
+                class="primary-button"
+                type="button"
+            >
+                <span>Continuar el recorrido</span>
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     ESCENA 6
+     PEQUEÑOS MOMENTOS
+===================================================== -->
+
+<section
+    id="scene-memories"
+    class="scene scene--memories"
+>
+
+    <div class="scene-content memories-content">
+
+        <div class="falling-light-arrival">
+            ✦
+        </div>
+
+        <p class="eyebrow">
+            Pequeños momentos
+        </p>
+
+        <h2 class="memories-title">
+            Grandes recuerdos
+        </h2>
+
+        <p class="memories-introduction">
+            Porque los momentos especiales no se cuentan
+            por la cantidad de fotografías,
+            sino por todo lo que nos hacen recordar.
+        </p>
+
+        <div
+            id="memories-gallery"
+            class="memories-gallery"
+        >
+
+            <!-- FOTO 1 -->
+
+            <article class="memory-card memory-card--active">
+
+                <div class="memory-photo">
+
+                    <img
+                        src="./assets/img/fotos/foto1.jpg"
+                        alt="Recuerdo especial"
+                    />
+
+                    <div class="memory-photo-glow"></div>
+
+                </div>
+
+                <p class="memory-caption">
+                    Hay momentos que permanecen incluso
+                    cuando el tiempo sigue avanzando.
+                </p>
+
+            </article>
+
+
+            <!-- FOTO 2 -->
+
+            <article class="memory-card">
+
+                <div class="memory-photo">
+
+                    <img
+                        src="./assets/img/fotos/foto2.jpg"
+                        alt="Recuerdo especial"
+                    />
+
+                    <div class="memory-photo-glow"></div>
+
+                </div>
+
+                <p class="memory-caption">
+                    Algunos recuerdos se construyen
+                    simplemente compartiendo el camino.
+                </p>
+
+            </article>
+
+
+            <!-- FOTO 3 -->
+
+            <article class="memory-card">
+
+                <div class="memory-photo">
+
+                    <img
+                        src="./assets/img/fotos/foto3.jpg"
+                        alt="Recuerdo especial"
+                    />
+
+                    <div class="memory-photo-glow"></div>
+
+                </div>
+
+                <p class="memory-caption">
+                    Y cada etapa deja pequeñas historias
+                    que vale la pena conservar.
+                </p>
+
+            </article>
+
+            <!-- FOTO 4 -->
+
+            <article class="memory-card">
+
+                <div class="memory-photo">
+
+                    <img
+                        src="./assets/img/fotos/foto4.jpg"
+                        alt="Recuerdo especial"
+                    />
+
+                    <div class="memory-photo-glow"></div>
+
+                </div>
+
+                <p class="memory-caption">
+                    Ya que todas tienen a la misma protagonista.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <div class="memories-controls">
+
+            <button
+                id="memory-prev"
+                class="memory-control"
+                type="button"
+                aria-label="Fotografía anterior"
+            >
+                ←
+            </button>
+
+            <div
+                id="memory-indicators"
+                class="memory-indicators"
+            ></div>
+
+            <button
+                id="memory-next"
+                class="memory-control"
+                type="button"
+                aria-label="Fotografía siguiente"
+            >
+                →
+            </button>
+
+        </div>
+
+
+        <button
+            id="memories-continue"
+            class="primary-button memories-continue"
+            type="button"
+        >
+            <span>Continuar</span>
+            <span>✦</span>
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     ESCENA 7
+     LO QUE QUIZÁ NO SIEMPRE DECIMOS
+===================================================== -->
+
+<section
+    id="scene-gratitude"
+    class="scene scene--gratitude"
+>
+
+    <div class="scene-content gratitude-content">
+
+        <div class="gratitude-star">
+            ✦
+        </div>
+
+        <p class="eyebrow">
+            Hay palabras que vale la pena decir
+        </p>
+
+        <h2 class="gratitude-title">
+            Lo que quizá no siempre decimos
+        </h2>
+
+        <p
+            class="gratitude-introduction"
+            data-gratitude-delay="0"
+        >
+            Entre reuniones, pendientes, proyectos
+            y días que parecen pasar demasiado rápido,
+            quizá no siempre existe la oportunidad
+            de decir algunas cosas.
+        </p>
+
+
+        <!-- FRASES -->
+
+        <div class="gratitude-phrases">
+
+            <p
+                class="gratitude-phrase"
+                data-gratitude-delay="1200"
+            >
+                Gracias por confiar.
+            </p>
+
+            <p
+                class="gratitude-phrase"
+                data-gratitude-delay="2100"
+            >
+                Gracias por escuchar.
+            </p>
+
+            <p
+                class="gratitude-phrase"
+                data-gratitude-delay="3000"
+            >
+                Gracias por impulsar.
+            </p>
+
+            <p
+                class="gratitude-phrase"
+                data-gratitude-delay="3900"
+            >
+                Gracias por enseñar.
+            </p>
+
+            <p
+                class="gratitude-phrase"
+                data-gratitude-delay="4800"
+            >
+                Gracias por permitirnos crecer.
+            </p>
+
+        </div>
+
+
+        <!-- LUCES -->
+
+        <div
+            id="gratitude-lights"
+            class="gratitude-lights"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- CIERRE -->
+
+        <div
+            id="gratitude-final"
+            class="gratitude-final"
+        >
+
+            <div class="gratitude-final-line"></div>
+
+            <p>
+                Y sobre todo...
+            </p>
+
+            <h3>
+                Gracias por compartir
+                el camino con nosotros.
+            </h3>
+
+            <p class="gratitude-seed-text">
+                Porque todo lo bueno que sembramos
+                puede seguir creciendo.
+            </p>
+
+            <div class="gratitude-seed">
+                <span class="seed-light">✦</span>
+
+                <span class="seed-ground"></span>
+
+                <span class="seed-sprout">
+                    🌱
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     ESCENA 8
+     EL ÁRBOL DE LOS BUENOS DESEOS
+===================================================== -->
+
+<section
+    id="scene-tree"
+    class="scene scene--tree"
+>
+
+    <div class="scene-content tree-content">
+
+        <div class="tree-star">
+            ✦
+        </div>
+
+        <p class="eyebrow">
+            Un lugar donde los buenos deseos siguen creciendo
+        </p>
+
+        <h2 class="tree-title">
+            El árbol de los buenos deseos
+        </h2>
+
+        <p class="tree-subtitle">
+            Hay deseos que no terminan cuando se dicen.
+            Algunos encuentran dónde quedarse...
+            y siguen creciendo.
+        </p>
+
+
+        <!-- ESCENARIO DEL ÁRBOL -->
+
+        <div class="tree-stage">
+
+            <svg
+                class="wish-tree"
+                viewBox="0 0 800 620"
+                aria-hidden="true"
+            >
+
+                <!-- suelo -->
+
+                <line
+                    class="tree-ground"
+                    x1="275"
+                    y1="562"
+                    x2="525"
+                    y2="562"
+                />
+
+
+                <!-- tronco -->
+
+                <path
+                    id="trunk-path"
+                    class="tree-path trunk-path"
+                    pathLength="100"
+                    d="M400 560
+                       C399 520, 395 470, 399 420
+                       C403 360, 398 315, 400 260"
+                />
+
+
+                <!-- ramas -->
+
+                <path
+                    class="tree-path branch-path"
+                    pathLength="100"
+                    d="M400 445
+                       C365 420, 336 390, 305 345"
+                />
+
+                <path
+                    class="tree-path branch-path"
+                    pathLength="100"
+                    d="M401 405
+                       C440 383, 470 350, 502 300"
+                />
+
+                <path
+                    class="tree-path branch-path"
+                    pathLength="100"
+                    d="M400 355
+                       C362 333, 338 303, 325 265"
+                />
+
+                <path
+                    class="tree-path branch-path"
+                    pathLength="100"
+                    d="M401 328
+                       C440 313, 470 286, 486 245"
+                />
+
+                <path
+                    class="tree-path branch-path"
+                    pathLength="100"
+                    d="M401 286
+                       C383 255, 364 233, 343 214"
+                />
+
+                <path
+                    class="tree-path branch-path"
+                    pathLength="100"
+                    d="M401 272
+                       C425 247, 450 228, 472 205"
+                />
+
+
+                <!-- hojas -->
+
+                <ellipse
+                    class="tree-leaf"
+                    cx="292"
+                    cy="338"
+                    rx="38"
+                    ry="20"
+                    transform="rotate(-18 292 338)"
+                />
+
+                <ellipse
+                    class="tree-leaf"
+                    cx="332"
+                    cy="286"
+                    rx="34"
+                    ry="18"
+                    transform="rotate(-8 332 286)"
+                />
+
+                <ellipse
+                    class="tree-leaf"
+                    cx="350"
+                    cy="228"
+                    rx="30"
+                    ry="16"
+                    transform="rotate(12 350 228)"
+                />
+
+                <ellipse
+                    class="tree-leaf"
+                    cx="505"
+                    cy="292"
+                    rx="39"
+                    ry="19"
+                    transform="rotate(15 505 292)"
+                />
+
+                <ellipse
+                    class="tree-leaf"
+                    cx="480"
+                    cy="238"
+                    rx="32"
+                    ry="17"
+                    transform="rotate(-15 480 238)"
+                />
+
+                <ellipse
+                    class="tree-leaf"
+                    cx="441"
+                    cy="206"
+                    rx="28"
+                    ry="15"
+                    transform="rotate(10 441 206)"
+                />
+
+                <ellipse
+                    class="tree-leaf"
+                    cx="395"
+                    cy="188"
+                    rx="34"
+                    ry="18"
+                    transform="rotate(-3 395 188)"
+                />
+
+                <ellipse
+                    class="tree-leaf"
+                    cx="428"
+                    cy="250"
+                    rx="26"
+                    ry="14"
+                    transform="rotate(8 428 250)"
+                />
+
+                <ellipse
+                    class="tree-leaf"
+                    cx="368"
+                    cy="255"
+                    rx="26"
+                    ry="14"
+                    transform="rotate(-12 368 255)"
+                />
+
+            </svg>
+
+
+            <!-- luces -->
+
+            <div class="tree-lights" aria-hidden="true">
+
+                <span
+                    class="tree-light"
+                    style="--light-x: 32%; --light-y: 54%;"
+                ></span>
+
+                <span
+                    class="tree-light"
+                    style="--light-x: 39%; --light-y: 41%;"
+                ></span>
+
+                <span
+                    class="tree-light"
+                    style="--light-x: 46%; --light-y: 30%;"
+                ></span>
+
+                <span
+                    class="tree-light"
+                    style="--light-x: 54%; --light-y: 27%;"
+                ></span>
+
+                <span
+                    class="tree-light"
+                    style="--light-x: 62%; --light-y: 39%;"
+                ></span>
+
+                <span
+                    class="tree-light"
+                    style="--light-x: 67%; --light-y: 51%;"
+                ></span>
+
+                <span
+                    class="tree-light"
+                    style="--light-x: 50%; --light-y: 18%;"
+                ></span>
+
+                <span
+                    class="tree-light"
+                    style="--light-x: 43%; --light-y: 52%;"
+                ></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- cierre -->
+
+        <div
+            id="tree-final"
+            class="tree-final"
+        >
+
+            <p class="tree-final-kicker">
+                Cada palabra sembró algo bueno
+            </p>
+
+            <h3>
+                Y todo lo que nace desde el cariño...
+                siempre encuentra una forma de florecer.
+            </h3>
+
+            <button
+                id="tree-continue"
+                class="primary-button tree-continue"
+                type="button"
+                >
+                <span>Descubrir un último deseo</span>
+                <span>✦</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     ESCENA 9
+     UN ÚLTIMO DESEO
+===================================================== -->
+
+<section
+    id="scene-gift"
+    class="scene scene--gift"
+>
+
+    <div class="scene-content gift-content">
+
+        <!-- luz que queda del árbol -->
+
+        <div class="gift-guiding-light">
+            ✦
+        </div>
+
+
+        <!-- introducción -->
+
+        <div class="gift-intro">
+
+            <p class="eyebrow">
+                Antes de terminar...
+            </p>
+
+            <h2 class="gift-title">
+                Todavía queda un último deseo
+            </h2>
+
+            <p class="gift-subtitle">
+                Porque después de tantos buenos deseos,
+                creemos que todavía falta uno muy importante.
+            </p>
+
+        </div>
+
+
+        <!-- regalo -->
+
+        <div
+            id="gift-box"
+            class="gift-box"
+            role="button"
+            tabindex="0"
+            aria-label="Abrir regalo"
+        >
+
+            <div class="gift-shadow"></div>
+
+            <div class="gift-lid">
+                <span class="gift-ribbon-vertical"></span>
+                <span class="gift-bow gift-bow--left"></span>
+                <span class="gift-bow gift-bow--right"></span>
+                <span class="gift-knot"></span>
+            </div>
+
+            <div class="gift-body">
+                <span class="gift-ribbon-body"></span>
+            </div>
+
+            <div class="gift-glow"></div>
+
+        </div>
+
+
+        <p
+            id="gift-instruction"
+            class="gift-instruction"
+        >
+            Toque el regalo para descubrirlo
+            <span>✦</span>
+        </p>
+
+
+        <!-- mensaje oculto -->
+
+        <div
+            id="gift-message"
+            class="gift-message"
+        >
+
+            <div class="gift-message-star">
+                ✦
+            </div>
+
+            <p class="gift-message-small">
+                Nuestro último deseo para usted es sencillo:
+            </p>
+
+            <h3>
+                Que nunca le falten razones
+                para sonreír.
+            </h3>
+
+            <p class="gift-message-body">
+                Que este nuevo año de vida llegue acompañado
+                de salud, alegría, personas queridas,
+                nuevos sueños y muchos momentos
+                que valga la pena recordar.
+            </p>
+
+            <p class="gift-message-closing">
+                Y que todo lo bueno que brinda a quienes la rodean,
+                encuentre siempre la manera de regresar a usted.
+            </p>
+
+            <button
+                id="gift-continue"
+                class="primary-button gift-continue"
+                type="button"
+            >
+                <span>Celebrar</span>
+                <span>✦</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     ESCENA 10
+     GRAN FINAL
+===================================================== -->
+
+<section
+    id="scene-finale"
+    class="scene scene--finale"
+>
+
+    <div class="scene-content finale-content">
+
+        <!-- INTRO -->
+
+        <div
+            id="finale-intro"
+            class="finale-intro"
+        >
+
+            <div class="finale-star">
+                ✦
+            </div>
+
+            <p class="eyebrow">
+                Ahora sí...
+            </p>
+
+            <h2 class="finale-title">
+                Feliz cumpleaños,
+                <span id="finale-name">
+                    Elizabeth
+                </span>
+            </h2>
+
+            <p class="finale-subtitle">
+                Solo falta una cosa.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             PASTEL
+        ================================================== -->
+
+        <div
+            id="birthday-cake"
+            class="birthday-cake"
+        >
+
+            <!-- Velas -->
+
+            <div class="candles">
+
+                <div class="candle">
+                    <span class="candle-flame"></span>
+                    <span class="candle-wick"></span>
+                </div>
+
+                <div class="candle">
+                    <span class="candle-flame"></span>
+                    <span class="candle-wick"></span>
+                </div>
+
+                <div class="candle">
+                    <span class="candle-flame"></span>
+                    <span class="candle-wick"></span>
+                </div>
+
+            </div>
+
+
+            <!-- Piso superior -->
+
+            <div class="cake-tier cake-tier--top">
+
+                <div class="cake-icing">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span class="cake-star cake-star--1">
+                    ✦
+                </span>
+
+                <span class="cake-star cake-star--2">
+                    ✦
+                </span>
+
+            </div>
+
+
+            <!-- Piso inferior -->
+
+            <div class="cake-tier cake-tier--bottom">
+
+                <div class="cake-icing cake-icing--bottom">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="cake-band"></div>
+
+            </div>
+
+
+            <div class="cake-plate"></div>
+
+        </div>
+
+
+        <!-- =================================================
+             PEDIR DESEO
+        ================================================== -->
+
+        <div
+            id="wish-block"
+            class="wish-block"
+        >
+
+            <p class="wish-small">
+                Cierre los ojos por un momento...
+            </p>
+
+            <h3>
+                Pida un deseo
+            </h3>
+
+            <button
+                id="blow-candles"
+                class="primary-button"
+                type="button"
+            >
+                <span>Soplar las velas</span>
+                <span>✨</span>
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             HUMO
+        ================================================== -->
+
+        <div
+            id="candle-smoke"
+            class="candle-smoke"
+            aria-hidden="true"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!-- =================================================
+             MENSAJE FINAL
+        ================================================== -->
+
+        <div
+            id="birthday-final-message"
+            class="birthday-final-message"
+        >
+
+            <div class="final-burst-star">
+                ✦
+            </div>
+
+            <p class="final-kicker">
+                28 · 08
+            </p>
+
+            <h2>
+                ¡Feliz cumpleaños,
+                <span id="final-message-name">
+                    Elizabeth
+                </span>!
+            </h2>
+
+            <p class="final-wish">
+                Que este nuevo año esté lleno de momentos
+                que hagan sonreír, sueños que valga la pena
+                perseguir y personas especiales con quienes
+                compartirlos.
+            </p>
+
+            <div class="final-separator">
+                <span></span>
+                <i>✦</i>
+                <span></span>
+            </div>
+
+            <p class="final-signature">
+                Con cariño,
+                <br>
+
+                <strong>
+                    de parte de todo su equipo.
+                </strong>
+            </p>
+
+            <button
+                id="restart-experience"
+                class="restart-button"
+                type="button"
+            >
+                <span>↻</span>
+                Volver a vivir la experiencia
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             CONFETI / DESTELLOS
+        ================================================== -->
+
+        <div
+            id="celebration-effects"
+            class="celebration-effects"
+            aria-hidden="true"
+        ></div>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- =====================================================
+     MODAL DE MENSAJE
+===================================================== -->
+
+<div
+    id="message-modal"
+    class="message-modal"
+    aria-hidden="true"
+>
+
+    <div
+        id="message-modal-backdrop"
+        class="message-modal-backdrop"
+    ></div>
+
+    <article
+        class="message-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="message-author"
+    >
+
+        <button
+            id="message-modal-close"
+            class="message-modal-close"
+            type="button"
+            aria-label="Cerrar mensaje"
+        >
+            ×
+        </button>
+
+        <div class="message-card-star">
+            ✦
+        </div>
+
+        <p class="message-card-label">
+            Un deseo para usted
+        </p>
+
+        <blockquote
+            id="message-text"
+            class="message-text"
+        ></blockquote>
+
+        <div class="message-signature">
+
+            <span>
+                Con cariño,
+            </span>
+
+            <strong id="message-author"></strong>
+
+        </div>
+
+        <button
+            id="message-card-close"
+            class="message-card-button"
+            type="button"
+        >
+            Guardar esta luz
+            <span>✦</span>
+        </button>
+
+    </article>
+
+</div>
+
+    <script src="./js/messages.js"></script>
+    <script src="./js/stars.js"></script>
+    <script src="./js/app.js"></script>
+
+</body>
+</html>
