@@ -4604,3 +4604,155 @@ span:nth-child(4) {
     }
 
 }
+
+/* =====================================================
+   MODAL DE MENSAJES - RESPONSIVE MÓVIL
+===================================================== */
+
+.message-modal {
+    padding:
+        max(14px, env(safe-area-inset-top))
+        12px
+        max(14px, env(safe-area-inset-bottom));
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.message-card,
+.message-modal-card,
+.message-modal-content {
+    width: min(92vw, 680px);
+    max-height: calc(100dvh - 28px);
+
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 700px) {
+
+    .message-card,
+    .message-modal-card,
+    .message-modal-content {
+        width: 100%;
+        max-height: calc(100dvh - 24px);
+
+        padding: 22px 18px 20px;
+
+        border-radius: 22px;
+    }
+
+    .message-card h3,
+    .message-modal-card h3,
+    .message-modal-content h3 {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-bottom: 18px;
+    }
+
+    .message-card blockquote,
+    .message-modal-card blockquote,
+    .message-modal-content blockquote,
+    .message-text,
+    .message-body {
+        font-size: clamp(18px, 6vw, 24px);
+        line-height: 1.7;
+    }
+
+    .message-card .message-author,
+    .message-modal-card .message-author,
+    .message-modal-content .message-author {
+        font-size: clamp(18px, 6vw, 22px);
+    }
+
+    .message-actions,
+    .message-footer {
+        position: sticky;
+        bottom: 0;
+
+        padding-top: 16px;
+
+        background:
+            linear-gradient(
+                to top,
+                rgba(10, 26, 56, 0.98) 70%,
+                rgba(10, 26, 56, 0)
+            );
+    }
+}
+
+/* =====================================================
+   ESCENA FINAL / PASTEL - RESPONSIVE MÓVIL
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .scene--finale {
+        padding:
+            max(14px, env(safe-area-inset-top))
+            16px
+            max(16px, env(safe-area-inset-bottom));
+
+        overflow-y: auto;
+    }
+
+    .finale-content {
+        min-height: auto;
+        justify-content: flex-start;
+        padding-bottom: 18px;
+    }
+
+    .finale-star {
+        margin-bottom: 8px;
+        font-size: 22px;
+    }
+
+    .finale-title {
+        font-size: clamp(34px, 9.5vw, 52px);
+        line-height: 1.08;
+        margin-bottom: 8px;
+    }
+
+    .finale-subtitle {
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+
+    .birthday-cake {
+        width: min(300px, 88vw);
+        height: 250px;
+
+        margin: 10px auto 2px;
+    }
+
+    .candles {
+        top: 46px;
+        gap: 28px;
+    }
+
+    .candle {
+        width: 10px;
+        height: 50px;
+    }
+
+    .candle-flame {
+        width: 16px;
+        height: 24px;
+        top: -26px;
+    }
+
+    .wish-small {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .wish-block h3 {
+        font-size: clamp(24px, 8vw, 34px);
+        margin-bottom: 12px;
+    }
+
+    #blow-candles,
+    .wish-block .primary-button {
+        transform: scale(0.96);
+    }
+}
