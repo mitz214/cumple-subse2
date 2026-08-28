@@ -146,6 +146,7 @@ body {
 
     width: 100%;
     height: 100vh;
+    height: 100dvh;
 
     z-index: 2;
 }
@@ -4356,13 +4357,6 @@ span:nth-child(4) {
         margin-bottom: 18px;
     }
 
-    .tree-illustration,
-    .tree-visual,
-    .wish-tree {
-        transform: scale(0.72);
-        transform-origin: center top;
-        margin: -10px auto -30px;
-    }
 
     .tree-small-text,
     .tree-kicker,
@@ -4399,13 +4393,6 @@ span:nth-child(4) {
         margin-bottom: 14px;
     }
 
-    .tree-illustration,
-    .tree-visual,
-    .wish-tree {
-        transform: scale(0.62);
-        margin: -25px auto -45px;
-    }
-
     .tree-message,
     .tree-final-message,
     .tree-closing {
@@ -4417,6 +4404,203 @@ span:nth-child(4) {
     .tree-continue {
         transform: scale(0.95);
         margin-top: 6px;
+    }
+
+}
+
+/* =====================================================
+   ÁRBOL - RESPONSIVE MÓVIL DEFINITIVO
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .scene--tree {
+        padding:
+            max(18px, env(safe-area-inset-top))
+            16px
+            max(18px, env(safe-area-inset-bottom));
+
+        align-items: flex-start;
+    }
+
+    .tree-content {
+        width: 100%;
+        height: 100%;
+
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: flex-start;
+        align-items: center;
+
+        padding: 0;
+    }
+
+
+    /* -------------------------
+       CABECERA
+    -------------------------- */
+
+    .tree-star {
+        margin-bottom: 6px;
+
+        font-size: 19px;
+    }
+
+    .tree-content .eyebrow {
+        max-width: 310px;
+
+        margin-bottom: 8px;
+
+        font-size: 9px;
+
+        line-height: 1.45;
+
+        letter-spacing: 3px;
+    }
+
+    .tree-title {
+        max-width: 340px;
+
+        margin-bottom: 10px;
+
+        font-size: clamp(34px, 10vw, 44px);
+
+        line-height: 1.06;
+    }
+
+    .tree-subtitle {
+        max-width: 330px;
+
+        margin-bottom: 6px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* -------------------------
+       ÁRBOL
+       
+       IMPORTANTE:
+       reducimos el CONTENEDOR,
+       no usamos transform: scale()
+    -------------------------- */
+
+    .tree-stage {
+        width: 100%;
+        height: 285px;
+
+        flex: 0 0 285px;
+
+        margin:
+            0 auto
+            8px;
+    }
+
+    .wish-tree {
+        width: 100%;
+        height: 100%;
+
+        transform: none;
+
+        margin: 0;
+    }
+
+
+    /* -------------------------
+       CIERRE
+    -------------------------- */
+
+    .tree-final {
+        width: 100%;
+        max-width: 350px;
+
+        margin-top: 0;
+    }
+
+    .tree-final-kicker {
+        margin-bottom: 7px;
+
+        font-size: 8px;
+
+        line-height: 1.4;
+
+        letter-spacing: 2.5px;
+    }
+
+    .tree-final h3 {
+        margin: 0 auto;
+
+        max-width: 340px;
+
+        font-size: clamp(24px, 7vw, 30px);
+
+        line-height: 1.18;
+    }
+
+    .tree-continue {
+        margin-top: 14px;
+
+        padding: 12px 18px;
+
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 700px) and (max-height: 820px) {
+
+    .scene--tree {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .tree-content .eyebrow {
+        margin-bottom: 5px;
+
+        font-size: 8px;
+    }
+
+    .tree-title {
+        margin-bottom: 6px;
+
+        font-size: 32px;
+    }
+
+    .tree-subtitle {
+        margin-bottom: 2px;
+
+        font-size: 13px;
+
+        line-height: 1.4;
+    }
+
+    .tree-stage {
+        height: 245px;
+
+        flex-basis: 245px;
+
+        margin-bottom: 4px;
+    }
+
+    .tree-final-kicker {
+        margin-bottom: 5px;
+    }
+
+    .tree-final h3 {
+        font-size: 23px;
+
+        line-height: 1.15;
+    }
+
+    .tree-continue {
+        margin-top: 9px;
+
+        padding: 10px 16px;
     }
 
 }
